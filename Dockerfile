@@ -11,7 +11,9 @@ ENTRYPOINT ["/bin/bash", "-c" ]
 
 # Use the environment.yml to create the conda environment.
 ADD environment.yml /tmp/environment.yml
+
 WORKDIR /tmp
+
 RUN ["conda", "env", "create" ]
 
 ADD . /code
@@ -24,4 +26,4 @@ RUN ["/bin/bash", "-c", "source activate test_stuff && python setup.py install" 
 
 # We set ENTRYPOINT, so while we still use exec mode, we don’t
 # explicitly call /bin/bash
-CMD [ "source activate test_stuff && cli_add 3 5" ]
+CMD [ "source activate test_stuff && cli_add" ]
