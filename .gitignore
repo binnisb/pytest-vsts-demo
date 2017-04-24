@@ -1,0 +1,9 @@
+.idea
+*.pyc
+.pydevproject
+.project
+.cache*
+.coverage
+.ipynb_checkpoints
+*.egg-info
+*.eggs
