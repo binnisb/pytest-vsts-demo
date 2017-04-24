@@ -12,6 +12,6 @@ setup(
     packages=['Calc'],
     zip_safe=False,
     entry_points={
-        'console_scripts': ['funniest-joke=funniest.command_line:main'],
+        'console_scripts': ['cli_add=Calc:__cli_add'],
     }
 )

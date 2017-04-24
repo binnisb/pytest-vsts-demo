@@ -24,4 +24,4 @@ RUN ["/bin/bash", "-c", "source activate test_stuff && python setup.py install" 
 
 # We set ENTRYPOINT, so while we still use exec mode, we don’t
 # explicitly call /bin/bash
-CMD [ "source activate test_stuff && exec python test.py" ]
+CMD [ "source activate test_stuff && cli_add 3 5" ]
