@@ -16,14 +16,13 @@ WORKDIR /tmp
 
 RUN ["conda", "env", "create" ]
 
+ENV PATH /opt/conda/envs/test_stuff/bin:$PATH
+
 ADD . /code
 
 # Use bash to source our new environment for setting up
 # private dependencies—note that /bin/bash is called in
 # exec mode directly
 WORKDIR /code
-RUN ["/bin/bash", "-c", "source activate test_stuff && python setup.py install" ]
-
-# We set ENTRYPOINT, so while we still use exec mode, we don’t
-# explicitly call /bin/bash
-CMD [ "source activate test_stuff && cli_add" ]
+RUN ["/bin/bash", "-c", "python setup.py install" ]
+ENTRYPOINT ["/bin/bash", "-c" ]
