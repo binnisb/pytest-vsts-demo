@@ -14,9 +14,7 @@ ADD environment.yml /tmp/environment.yml
 
 WORKDIR /tmp
 
-RUN ["conda", "env", "create" ]
-
-ENV PATH /opt/conda/envs/test_stuff/bin:$PATH
+RUN ["conda", "env", "update","-n", "root","--file", "environment.yml"]
 
 ADD . /code
 
