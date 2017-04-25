@@ -12,6 +12,9 @@ setup(
     packages=['Calc'],
     zip_safe=False,
     entry_points={
-        'console_scripts': ['cli_add=Calc:__cli_add'],
+        'console_scripts': [
+            'cli_add=Calc:__cli_add',
+            'stock_fetch=Calc:__stock_fetch'
+        ],
     }
 )
