@@ -1,4 +1,3 @@
-name: test_stuff
 
 dependencies:
   - python=3
