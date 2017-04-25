@@ -25,4 +25,4 @@ def __stock_fetch():
 
     df = read_stock(stock,start_date,end_date)
     df.to_csv("./{stock}-{start}-{end}.csv".format(stock=stock,start=start_date,end=end_date))
-    print(df)
+    print(df.to_csv())
