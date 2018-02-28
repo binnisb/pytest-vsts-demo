@@ -12,15 +12,11 @@ ENTRYPOINT ["/bin/bash", "-c" ]
 # Use the environment.yml to create the conda environment.
 ADD environment.yml /tmp/environment.yml
 
-WORKDIR /tmp
-
-RUN ["conda", "env", "update","-n", "root","--file", "environment.yml"]
-
 ADD . /code
 
-# Use bash to source our new environment for setting up
-# private dependencies—note that /bin/bash is called in
-# exec mode directly
 WORKDIR /code
-RUN ["/bin/bash", "-c", "python setup.py install" ]
-ENTRYPOINT ["/bin/bash", "-c" ]
+
+RUN conda update --quiet -y conda && \
+    conda env update --quiet -n base --file=/tmp/environment.yml && \
+    /opt/conda/bin/pip install . && \
+    conda clean -tipsy
