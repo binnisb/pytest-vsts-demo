@@ -1,6 +1,6 @@
 import datetime
 from docopt import docopt
-from .Calculator import *
+from .Simple import *
 
 def __cli_add():
     """
