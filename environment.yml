@@ -2,7 +2,7 @@ dependencies:
   - pytest
   - pytest-cov
   - pytest-runner
-  - setuptools
+  - setuptools>=31.0.1
   - docopt
   - pip:
     - pytest-xdist
