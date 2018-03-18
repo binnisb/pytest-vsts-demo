@@ -16,6 +16,7 @@ ADD . /code
 
 WORKDIR /code
 
-RUN conda env update --quiet -n base --file=/tmp/environment.yml && \
+RUN conda update --quiet -y conda && \
+    conda env update --quiet -n base --file=/tmp/environment.yml && \
     /opt/conda/bin/pip install . && \
     conda clean -tipsy
