@@ -13,8 +13,7 @@ setup(
     zip_safe=False,
     entry_points={
         'console_scripts': [
-            'cli_add=Demo:__cli_add',
-            'stock_fetch=Demo:__stock_fetch'
+            'cli_add=Demo:__cli_add'
         ],
     }
 )
