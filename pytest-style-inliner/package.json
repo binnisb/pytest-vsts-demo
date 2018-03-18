@@ -1,0 +1,14 @@
+{
+  "name": "pytest-style-inliner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "coverage_html.js",
+  "scripts": {
+    "fix": "node ./inline-style.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vsts-coverage-styles": "^1.0.7"
+  }
+}
