@@ -2,8 +2,6 @@ dependencies:
   - pytest
   - pytest-cov
   - pytest-runner
-  - pandas
-  - pandas-datareader
   - setuptools
   - docopt
   - pip:
